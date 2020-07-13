@@ -1,0 +1,40 @@
+package com.example.RestoranZomato.data.network;
+
+
+import java.util.Map;
+
+import com.example.RestoranZomato.data.network.model.LocationResponse;
+import com.example.RestoranZomato.data.network.model.RestaurantDetailResponse;
+import com.example.RestoranZomato.data.network.model.RestaurantsResponse;
+import com.example.RestoranZomato.util.AppConstants.Params;
+import io.reactivex.Observable;
+import retrofit2.http.GET;
+import retrofit2.http.HeaderMap;
+import retrofit2.http.Query;
+
+public interface ApiClient {
+
+    ApiHeader getApiHeader();
+
+    @GET(ApiEndPoint.API_RESTAURANT_LIST)
+    Observable<RestaurantsResponse> getRestaurants(
+            @HeaderMap Map<String, String> apiKey,
+            @Query(Params.Q) String query,
+            @Query(Params.LATITUDE) Double lat,
+            @Query(Params.LONGITUDE) Double lon,
+            @Query(Params.START) int skip);
+
+    @GET(ApiEndPoint.API_RESTAURANT_DETAIL)
+    Observable<RestaurantDetailResponse> getRestaurantDetail(
+            @HeaderMap Map<String, String> apiKey,
+            @Query(Params.RESTAURANT_ID) String restaurantId
+    );
+
+    @GET(ApiEndPoint.API_LOCATION_LIST)
+    Observable<LocationResponse> getLocations(
+            @HeaderMap Map<String, String> apiKey,
+            @Query(Params.QUERY) String query,
+            @Query(Params.LATITUDE) Double lat,
+            @Query(Params.LONGITUDE) Double lon,
+            @Query(Params.COUNT) int count);
+}

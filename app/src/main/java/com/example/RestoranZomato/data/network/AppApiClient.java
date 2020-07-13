@@ -1,0 +1,47 @@
+package com.example.RestoranZomato.data.network;
+
+import java.util.Map;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import com.example.RestoranZomato.data.network.model.LocationResponse;
+import com.example.RestoranZomato.data.network.model.RestaurantDetailResponse;
+import com.example.RestoranZomato.data.network.model.RestaurantsResponse;
+import io.reactivex.Observable;
+
+
+@Singleton
+public class AppApiClient implements ApiClient {
+
+    private ApiHeader mApiHeader;
+    private ApiClient apiClient;
+
+    @Inject
+    AppApiClient(ApiHeader apiHeader, ApiClient apiClient) {
+        this.mApiHeader = apiHeader;
+        this.apiClient = apiClient;
+    }
+
+    @Override
+    public ApiHeader getApiHeader() {
+        return mApiHeader;
+    }
+
+    @Override
+    public Observable<RestaurantsResponse> getRestaurants(Map<String, String> apiKey, String query, Double lat, Double lon, int skip) {
+        return apiClient.getRestaurants(apiKey, query, lat, lon, skip);
+    }
+
+    @Override
+    public Observable<RestaurantDetailResponse> getRestaurantDetail(
+            Map<String, String> apiKey, String restaurantId) {
+        return apiClient.getRestaurantDetail(apiKey, restaurantId);
+    }
+
+    @Override
+    public Observable<LocationResponse> getLocations(Map<String, String> apiKey, String query, Double lat, Double lon, int count) {
+        return apiClient.getLocations(apiKey, query, lat, lon, count);
+    }
+}
+

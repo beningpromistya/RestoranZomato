@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Restaurant Zomato</string>
+    <string name="app_description">Your food guide, powered by Zomato!</string>
+
+
+    <!--Toolbar menus-->
+    <string name="share">Share</string>
+    <string name="something_went_wrong">Some Error Occurred!</string>
+
+    <string name="no_internet">No Internet</string>
+    <string name="your_location">Your location</string>
+    <string name="directions">Directions</string>
+    <string name="reviews">Reviews</string>
+    <string name="menu">Menu</string>
+<!--    <string name="open_in_zomato_app">Open in Zomato app</string>-->
+<!--    <string name="zomato_app_not_installed">Zomato app not installed</string>-->
+    <string name="search_for_locations">Search for locations...</string>
+    <string name="share_using">Share using</string>
+    <string name="link_format_zomato_restaurant">http://zoma.to/r/</string>
+    <string name="get_instant_confirmations">Get instant confirmations</string>
+    <string name="closed">Closed</string>
+    <string name="looking_for_food_delivery">Looking for food delivery?</string>
+    <string name="order_food_online_from">Order food online from</string>
+    <string name="this_restaurant_is_not_accepting_food_delivery_orders_right_now">Restoran ini tidak menerima delivey order untuk saat ini</string>
+    <string name="currently_closed_for_delivery">Delivery is not available</string>
+    <string name="book_a_table">Book a table</string>
+    <string name="order_online">Order online</string>
+    <string name="search_restaurants">Search restaurants</string>
+<!--    <string name="app_subtitle">Think food, think us!</string>-->
+    <string name="see_events_here">See Events here</string>
+    <string name="have_a_sneak_peak_into_the_events_happening_here">Have a sneak peak into the events happening here</string>
+    <string name="online_order">Online order</string>
+    <string name="table_booking">Table booking</string>
+    <string name="dummy_duration">5 months</string>
+    <string name="an_internet_connection_is_required">An Internet connection is required for this app to run.</string>
+    <string name="restart">Restart app</string>
+    <string name="its_empty_here">Its empty here</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="detecting_location">Detecting location…</string>
+    <string name="fetching_location">Fetching location…</string>
+    <string name="custom_location">Custom location</string>
+    <string name="location_permission_needed">To show you the best restaurants around you, We need location permission access.</string>
+    <string name="location_permission_needed_title">Missing location access</string>
+    <string name="grant">Grant access!</string>
+    <string name="choose_location">Choose location</string>
+    <string name="choose_location_for_handpicked_restaurants">For showing the best around you!</string>
+    <string name="cant_access_current_location_without_perm">Can\'t access current location without location permissions</string>
+    <string name="cancel">Cancel</string>
+    <string name="showing_restaurants_over_the_world">Showing restaurants around the world</string>
+    <string name="showing_restaurants_around_you">Showing restaurants around you</string>
+    <string name="return_to_top">Return to top</string>
+</resources>

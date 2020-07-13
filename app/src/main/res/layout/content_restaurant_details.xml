@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_activity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.restaurantpage.RestaurantDetailActivity"
+    tools:showIn="@layout/activity_restaurant_details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutContent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/restaurantThumb"
+                            android:layout_width="149dp"
+                            android:layout_height="154dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            tools:src="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/circular_bold"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                tools:text="Al-Bek" />
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/circular_book"
+                                tools:text="Multi - cuisine restaurant" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:id="@+id/ratings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/circular_bold"
+                                android:paddingStart="7dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="7dp"
+                                android:paddingBottom="3dp"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                tools:text="4.1" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/component_dashed_divider" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/circular_book"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/gray"
+                        tools:text="Bangalore" />
+
+                    <include layout="@layout/component_dashed_divider" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                    </LinearLayout>
+
+                    <!--Reviews count-->
+                    <LinearLayout
+                        android:id="@+id/reviewsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="?selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/reviews"
+                            android:src="@drawable/ic_star" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/reviewsCount"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/circular_book"-->
+<!--                                android:text="@string/reviews"-->
+<!--                                android:textColor="@color/gray"-->
+<!--                                android:textSize="14sp" />-->
+
+<!--                            <View-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="2dp"-->
+<!--                                android:background="@drawable/dotted_line_green" />-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/component_dashed_divider"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <include
+                        android:id="@+id/layoutTableBooking"
+                        layout="@layout/layout_table_booking" />
+
+                    <include
+                        android:id="@+id/layoutOnlineOrder"
+                        layout="@layout/layout_online_order" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
