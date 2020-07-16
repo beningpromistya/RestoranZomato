@@ -167,6 +167,29 @@ public class RestaurantsResponse {
         @SerializedName("R")
         private R r;
 
+        public Restaurant(
+                String id,
+                String name,
+                String thumb,
+                String averageCostForTwo,
+                String priceRange,
+                String currency,
+                UserRating userRating,
+                String isDeliveringNow,
+                String hasOnlineDelivery,
+                Location location) {
+            this.id = id;
+            this.name = name;
+            this.thumb = thumb;
+            this.averageCostForTwo = averageCostForTwo;
+            this.priceRange = priceRange;
+            this.currency = currency;
+            this.userRating = userRating;
+            this.isDeliveringNow = isDeliveringNow;
+            this.hasOnlineDelivery = hasOnlineDelivery;
+            this.location = location;
+        }
+
         public List<String> getEstablishmentTypes() {
             return establishmentTypes;
         }
@@ -446,6 +469,10 @@ public class RestaurantsResponse {
         @SerializedName("aggregate_rating")
         private String aggregateRating;
 
+        public UserRating(String v) {
+            this.aggregateRating = v;
+        }
+
         public String getVotes() {
             return votes;
         }
@@ -507,6 +534,11 @@ public class RestaurantsResponse {
         @Expose
         @SerializedName("address")
         private String address;
+
+        public Location(String v, String v1) {
+            this.longitude = v;
+            this.latitude = v1;
+        }
 
         public String getLocalityVerbose() {
             return localityVerbose;

@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import com.example.RestoranZomato.data.network.model.LocationResponse;
 import com.example.RestoranZomato.data.network.model.RestaurantDetailResponse;
 import com.example.RestoranZomato.data.network.model.RestaurantsResponse;
+
 import io.reactivex.Observable;
 
 

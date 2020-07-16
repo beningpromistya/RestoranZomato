@@ -16,9 +16,11 @@ import com.example.RestoranZomato.data.network.model.RestaurantDetailResponse;
 import com.example.RestoranZomato.data.network.model.RestaurantsResponse;
 import com.example.RestoranZomato.data.prefs.PreferencesHelper;
 import com.example.RestoranZomato.di.ApplicationContext;
+
 import io.reactivex.Observable;
 
-
+//@RunWith(RobolectricTestRunner.class)
+//@Config(constants = AppDataManager.class)
 @Singleton
 public class AppDataManager implements DataManager {
 

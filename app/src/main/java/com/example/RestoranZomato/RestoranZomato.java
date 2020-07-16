@@ -9,6 +9,10 @@ import com.example.RestoranZomato.di.component.DaggerApplicationComponent;
 import com.example.RestoranZomato.di.module.ApplicationModule;
 import com.example.RestoranZomato.util.AppLogger;
 
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
+
 public class RestoranZomato extends Application {
 
     private ApplicationComponent mApplicationComponent;
@@ -24,12 +28,6 @@ public class RestoranZomato extends Application {
                 .build();
         mApplicationComponent.inject(this);
 
-        //Font
-       /* CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("font/bold.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );*/
 
         //Logger
         AppLogger.init();
